@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -17,8 +18,14 @@ public class Main {
         String s="HELLO";
         String s2="hello";
         String s3="23576";
+        List<String> s4 = Arrays.asList("hello","khjk","plpo");
         System.out.println("if string is uppercase : "+ s.chars().anyMatch(Character::isUpperCase));
         System.out.println("if string is lowercase : "+ s2.chars().anyMatch(Character::isLowerCase));
         System.out.println("if string has digit : "+ s3.chars().anyMatch(Character::isDigit));
+        s4.stream().map(x->{
+            System.out.println(x);
+            return " +x" + x;
+
+        });
     }
 }
