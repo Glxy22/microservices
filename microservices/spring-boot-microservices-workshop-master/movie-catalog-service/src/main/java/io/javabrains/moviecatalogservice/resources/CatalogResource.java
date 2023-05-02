@@ -39,6 +39,7 @@ public class CatalogResource {
                 .collect(Collectors.toList());
 
     }
+
 }
 
 /*
