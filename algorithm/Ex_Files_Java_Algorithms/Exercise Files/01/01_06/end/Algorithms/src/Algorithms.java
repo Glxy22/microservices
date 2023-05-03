@@ -9,8 +9,9 @@ public class Algorithms {
         for (int i = s.length() - 1; i >= 0; i--) {
             reversed.append(s.charAt(i));
         }
+        System.out.println("String builder without toString : "+ reversed);
+         return reversed.toString();
 
-        return reversed.toString();
     }
 
     public static void main(String[] args) {
