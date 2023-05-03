@@ -18,6 +18,7 @@ public class CustomLinkedList {
         }
 
         // list = [a, b, c, d]; k = 2
+        Node f= head;
         Node first = head; // a
         Node second = head; // a
 
