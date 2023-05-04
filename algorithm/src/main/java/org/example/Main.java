@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.OptionalInt;
+import java.util.*;
 import java.util.function.IntPredicate;
 import java.util.stream.Stream;
 
@@ -42,6 +40,20 @@ public class Main {
        return Stream.of(arr1,arr2).flatMapToInt(Arrays::stream).filter(isEven).toArray();
 
     }
+    public static void convertNumberToBinary(int n){
+        int num=1;
+        Queue<Integer> que = new LinkedList<>();
+        que.add(num);
+        for(int i=0; i<n; i++){
+          num = que.remove();
+            System.out.println( "Binary no i s: "+num);
+          num= num * 10;
+          que.add(num);
+          num+=1;
+          que.add(num);
+
+        }
+    }
     public static void main(String[] args) {
         int [] nums= new int[]{1,7,3,4, 19,33,25};
 
@@ -63,6 +75,9 @@ public class Main {
 //            Arrays.asList(nums);
 //            System.out.println(x);
         }
+        // find the binary of a given number
+        convertNumberToBinary(9);
+
         Arrays.sort(nums);
         System.out.println(",,."+Arrays.toString(nums));
        System.out.println(nums);
