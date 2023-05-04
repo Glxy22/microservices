@@ -54,6 +54,14 @@ public class Main {
 
         }
     }
+    public static void printOuttheQueue(){
+        Queue<String> stringQue= new LinkedList<>();
+        stringQue.add("first no");
+        stringQue.add("second no");
+        stringQue.add("third no");
+        System.out.println("Queue value is : " + stringQue);
+
+    }
     public static void main(String[] args) {
         int [] nums= new int[]{1,7,3,4, 19,33,25};
 
@@ -77,6 +85,9 @@ public class Main {
         }
         // find the binary of a given number
         convertNumberToBinary(9);
+
+        //print out the Queue
+        printOuttheQueue();
 
         Arrays.sort(nums);
         System.out.println(",,."+Arrays.toString(nums));
