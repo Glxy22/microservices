@@ -95,6 +95,22 @@ public class Main {
             }
 
     }
+
+    public static void compareTwoArrayElements(int[] first, int[] second){
+        List<Integer> missingElements = new LinkedList<>();
+        HashSet<Integer> commonElements = new HashSet<>();
+
+        for(int x : first){
+            commonElements.add(x);
+        }
+        for(int y : second){
+            if(!commonElements.contains(y)){
+                missingElements.add(y);
+            }
+        }
+        System.out.println(commonElements + "-> are common elements");
+        System.out.println(missingElements+"-> are Not matching elements");
+    }
     public static void main(String[] args) {
         int [] nums= new int[]{1,7,3,4, 19,33,25};
 
@@ -126,6 +142,8 @@ public class Main {
         //find largernumber
         checkTheLargerNumber(new int[]{3,5,16,78,4,2});
 
+        compareTwoArrayElements(new int[]{2,4,4,3,5,6,9,7}, new int[]{2,3,4,6,8,9});
+
         Arrays.sort(nums);
         System.out.println(",,."+Arrays.toString(nums));
        System.out.println(nums);
@@ -142,5 +160,27 @@ public class Main {
             return " +x" + x;
 
         });
+
+        countofElementinarray(new int[]{4,5,43,2,5,6,4,3,2,43,1,0});
+    }
+
+    public static void countofElementinarray(int[] arr){
+         HashMap<Integer, Integer> map = new HashMap<>();
+
+         for(int x : arr){
+             if(!map.containsKey(x)){
+                 map.put(x,1);
+             }
+             else{
+                 map.put(x,map.get(x)+1);
+             }
+         }
+         //one way to iterate over Hash map
+//      for(Map.Entry<Integer, Integer> c : map.entrySet()){
+//          System.out.println(c.getKey()+"...."+c.getValue());
+//      }
+
+        //other way to itterate over Hash map.
+      map.forEach((key,value)->System.out.println(key+"...."+value));
     }
 }
