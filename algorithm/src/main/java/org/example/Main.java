@@ -62,6 +62,39 @@ public class Main {
         System.out.println("Queue value is : " + stringQue);
 
     }
+
+    public static void checkTheLargerNumber(int[] arr){
+
+        Stack<Integer> st= new Stack<>();
+
+        st.push(arr[0]);
+        int num ;
+
+        // checkTheLargerNumber(new int[]{3,5,16,78,4,2});
+        for (int i = 1; i < arr.length; i++) {
+
+            if (!st.isEmpty()) {
+                num = st.pop();
+                while (num < arr[i]) {
+                    System.out.println(num + "-->" + arr[i]);
+                    if (st.isEmpty()) {
+                        break;
+                    }
+                    num = st.pop();
+                }
+
+                if (num > arr[i]) {
+                    st.push(num);
+                }
+            }
+            st.push(arr[i]);
+        }
+            while(!st.isEmpty()){
+                int pop2= st.pop();
+                System.out.println(pop2+" --> "+ "-1");
+            }
+
+    }
     public static void main(String[] args) {
         int [] nums= new int[]{1,7,3,4, 19,33,25};
 
@@ -88,6 +121,10 @@ public class Main {
 
         //print out the Queue
         printOuttheQueue();
+
+
+        //find largernumber
+        checkTheLargerNumber(new int[]{3,5,16,78,4,2});
 
         Arrays.sort(nums);
         System.out.println(",,."+Arrays.toString(nums));
