@@ -39,5 +39,9 @@ public class streamClass {
         //filter the numbers in list when they are odd and the perform operations
            nums.stream().filter(n->n%2==1).sorted().forEach(System.out::println);
 
+       // add the elements by stream.reduce()
+          int x=  nums.stream().reduce(0,(a,b)->(a+b));
+        System.out.println("sum is : "+ x);
+
     }
 }
