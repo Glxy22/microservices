@@ -15,17 +15,21 @@ public class streamClass {
         List<Integer> nums = Arrays.asList(2, 3, 5, 6, 7, 4);
         Stream<Integer> numStr = nums.stream();
 
+
         //anyMatch on stream
         boolean istrue= numStr.anyMatch(c->c==4);
         System.out.println(istrue);
 
-        //for Each can' tbe performed on single stream as it ahs been used earlier
+        //for Each can't tbe performed on single stream as it ahs been used earlier
 
        // numStr.forEach(c -> System.out.println(c));
         nums.stream().forEach(System.out::println);
 
-
-
+//size of list by stream count()
+        System.out.println(nums.stream().count());
+        System.out.println("\n");
+           nums.stream().sorted().
+                forEach(System.out::println);
 
     }
 }
