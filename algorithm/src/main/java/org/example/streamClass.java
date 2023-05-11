@@ -17,19 +17,27 @@ public class streamClass {
 
 
         //anyMatch on stream
-        boolean istrue= numStr.anyMatch(c->c==4);
+        boolean istrue = numStr.anyMatch(c -> c == 4);
         System.out.println(istrue);
 
         //for Each can't tbe performed on single stream as it ahs been used earlier
 
-       // numStr.forEach(c -> System.out.println(c));
+        // numStr.forEach(c -> System.out.println(c));
         nums.stream().forEach(System.out::println);
 
-//size of list by stream count()
+        //size of list by stream count()
         System.out.println(nums.stream().count());
         System.out.println("\n");
-           nums.stream().sorted().
+        nums.stream().sorted().
                 forEach(System.out::println);
+        System.out.println("\n");
+
+        //double the value by map
+        nums.stream().map(n -> n * 2).forEach(System.out::println);
+        System.out.println("\n");
+
+        //filter the numbers in list when they are odd and the perform operations
+           nums.stream().filter(n->n%2==1).sorted().forEach(System.out::println);
 
     }
 }
