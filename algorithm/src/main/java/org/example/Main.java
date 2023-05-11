@@ -126,7 +126,8 @@ public class Main {
         System.out.println("find the item through binary search : " + item);
 
         //find the even numbers in 2 arrays
-   Arrays.stream(arrayOfEvenNumbers(new int[]{2,4,3,4,6,5,7},new int[]{8,7,5,4,3,1,2})).forEach(System.out::println);
+   Arrays.stream(arrayOfEvenNumbers(new int[]{2,4,3,4,6,5,7},new int[]{8,7,5,4,3,1,2}))
+           .forEach(System.out::println);
 //
         for(int x:nums) {
 //            Arrays.asList(nums);
