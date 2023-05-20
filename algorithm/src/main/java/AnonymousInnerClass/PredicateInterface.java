@@ -11,7 +11,9 @@ public static void showp(){
         Predicate<String> isLongerThan5 = str-> str.length() > 5;
         var y= isLongerThan5.test("Nadia");
     System.out.println(y);
-    //predicate combining
+    //predicate combining: TO FILTER DATE: predicate return boolean:
+    // we have biPredicate takes 2 arguments
+    //we have intPredicate and longPredicate
 
     Predicate<String> str1= str-> str.contains("a");
     Predicate<String> str2 = str-> str.contains("c");
