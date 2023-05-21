@@ -29,5 +29,22 @@ public class FindDistict {
         movies.stream()
                 .map(movie-> movie.getLikes() > 30)
                 .forEach(System.out::println);
+
+//find conditional movies with filter
+         movies.stream()
+                .filter(movie-> movie.getLikes() > 30)
+                 .map(n->n.getLikes())
+                .forEach(System.out::println);
+
+         //usage of peek
+        movies.stream()
+                .filter(movie->movie.getLikes()>25)
+                .peek(m->System.out.println("get titles : "+m.getTitle()))
+                .map(movie->movie.getTitle())
+                .peek(title->System.out.println("mapped : "+ title.concat(" : HEllO")))
+                .forEach(System.out::println);
+
+
+
     }
 }
