@@ -11,4 +11,7 @@ public  class Movie {
     public String getTitle() {
         return title;
     }
+    public Integer getLikes(){
+        return this.likes;
+    }
 }
