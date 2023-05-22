@@ -40,5 +40,14 @@ public class TerminalOperations {
                 .min(Comparator.comparing(Movie::getLikes))
                 .get();
         System.out.println("minimum number in likes : "+ minLike.getLikes());
+
+        //reduce find max
+       var max= movies.stream()
+                .map(Movie::getLikes)
+                .reduce(Integer::max).get();
+
+        System.out.println("reducre max : "+max);
+
+
     }
 }
