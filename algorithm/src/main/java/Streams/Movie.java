@@ -5,7 +5,7 @@ public  class Movie {
     private String title;
     private int likes;
 
-    public Movie(String title, Genre genre, int likes){
+    public Movie(String title, int likes){
         this.likes=likes;
         this.title=title;
 
