@@ -24,10 +24,28 @@ public class Array {
                 newItems[i] = items[i];
 
             }
-            items= newItems;         //set addess of newItems to items
+            items= newItems;         //set address of newItems to items
         }
         //add item at the end
         items[count++] = num;
+    }
+
+    public void remove(int index){
+        if(index < 0 || index >=count)
+            throw new IllegalArgumentException();
+        for (int i = index; i < count; i++) {
+            items[i]=items[i+1];
+               }
+        count--;
+    }
+
+    public int indexOf(int item){
+        for (int i = 0; i < count; i++)
+            if(items[i]==item)
+                return i;
+
+                return -1;
+
     }
 
 }
